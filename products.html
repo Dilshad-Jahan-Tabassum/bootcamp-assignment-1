@@ -10,7 +10,9 @@
         <!-- tailwind + daisy ui  --> 
         <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+<!-- stylesheet  -->
+        <link rel="stylesheet" href="./styles/style.css">
+    
 </head>
 <body>
     <header class="bg-base-100 shadow-sm">
@@ -56,7 +58,7 @@
         <h1 class="font-bold text-3xl text-center">Our Products</h1>
         <!-- category section  -->
         <div id="category-container" class="flex flex-wrap lg:flex-row mt-5 justify-center items-center gap-4">
-            <button onclick="loadProducts()" class="btn rounded-full">All</button>
+            <button onclick="loadProducts()" class="btn rounded-full active">All</button>
 
         </div>
     </section>
@@ -68,6 +70,11 @@
          
     </section>
 
+    <!-- spinner section  -->
+    <section id="spinner" class="flex justify-center items-center py-10 hidden">
+        <span class="loading loading-infinity loading-xl"></span>
+    </section>
+   
 <!-- footer  -->
      <section class=" bg-slate-900 ">
         <footer class="footer sm:footer-horizontal text-base-content p-5 pt-10 text-white lg:w-9/12 mx-auto lg:gap-15">
@@ -134,6 +141,25 @@
   </nav>
 </footer>
      </section>
+
+
+
+      <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="product_details" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="details-container" class="space-y-5">
+        
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
     <script src="./script/products.js"></script>
 </body>
 </html>
