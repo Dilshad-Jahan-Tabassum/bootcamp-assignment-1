@@ -31,7 +31,7 @@ const removeActiveClass = () =>{
 }
 
 const loadCategoryProducts = category =>{
-    
+    manageSpinner(true);
     const url = `https://fakestoreapi.com/products/category/${category}`;
     fetch(url)
     .then(res=>res.json())
