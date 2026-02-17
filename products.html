@@ -25,7 +25,7 @@
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a target="_blank" href="products.html">Products</a></li>
             <li><a>About</a></li>
             <li><a>Contact</a></li>
@@ -52,15 +52,88 @@
 </div>
     </header>
     
-    <section>
+    <section class="mt-10">
         <h1 class="font-bold text-3xl text-center">Our Products</h1>
-        <div id="category-container" class="flex flex-wrap lg:flex-row mt-5 justify-center items-center gap-4 border">
-            <button class="btn rounded-full">All</button>
+        <!-- category section  -->
+        <div id="category-container" class="flex flex-wrap lg:flex-row mt-5 justify-center items-center gap-4">
+            <button onclick="loadProducts()" class="btn rounded-full">All</button>
 
         </div>
     </section>
+    <!-- card section  -->
+    <section class="m-5  w-11/12 mx-auto">
+        <div id="products-container" class="card grid grid-cols-1 lg:grid-cols-4 gap-8">    
 
+        </div>
+         
+    </section>
 
+<!-- footer  -->
+     <section class=" bg-slate-900 ">
+        <footer class="footer sm:footer-horizontal text-base-content p-5 pt-10 text-white lg:w-9/12 mx-auto lg:gap-15">
+  <nav>
+    <h1 class="text-3xl font-bold text-primary">SwiftCart</h1>
+    <p class="w-full lg:w-65 text-gray-500 text-xl lg:text-base ">Your one-stop shop for all your fashion and lifestyle needs. Quality products, fast delivery, and excellent support.</p>
+  </nav>
+  <nav class="text-xl lg:text-base">
+    <h6 class="footer-title">quick links</h6>
+    <a class="link link-hover">Home</a>
+    <a class="link link-hover">Products</a>
+    <a class="link link-hover">About</a>
+    <a class="link link-hover">Contact</a>
+    
+  </nav>
+  <nav class="text-xl lg:text-base">
+    <h6 class="footer-title">support</h6>
+    <a class="link link-hover">FAQ</a>
+    <a class="link link-hover">Shipping</a>
+    <a class="link link-hover">Returns</a>
+    <a class="link link-hover">Privacy policy</a>
+    
+  </nav>
+  <form class="text-xl lg:text-base">
+    <h6 class="footer-title">Subscribe to our Newsletter</h6>
+    <p class="w-full lg:w-60 text-gray-300">The latest news,articles, and resources, sent to your inbox weekly.</p>
+    <fieldset class="w-full">
+      <div class="flex flex-col lg:flex-row gap-3 ">
+        <input
+          type="text"
+          placeholder="Enter your email"
+          class="input input-bordered rounded-lg w-full lg:w-35 font-bold text-gray-500 text-lg lg:text-sm " />
+        <button class="btn btn-primary rounded-lg font-bold text-lg lg:text-base ">Subscribe</button>
+      </div>
+    </fieldset>
+  </form>
+        </footer>
+
+  <footer class="footer text-base-content border-base-400 border-t px-5 lg:px-10 py-4 text-white lg:w-9/12 mx-auto grid grid-cols-1 lg:grid-cols-2">
+  <aside class="order-2 lg:order-1 ">
+    
+    <p class="text-gray-500 font-semibold text-xl lg:text-base">
+      &copy; 2025 SwiftCart, Inc. All rights reserved.
+    </p>
+  </aside>
+  <nav class="order-1 lg:order-2 lg:justify-self-end">
+    <div class="grid grid-flow-col gap-4 text-2xl lg:text-xl">
+      <a>
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a>
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a>
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a>
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a>
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+  </nav>
+</footer>
+     </section>
     <script src="./script/products.js"></script>
 </body>
 </html>
